@@ -1,0 +1,4 @@
+$ ls -ld  HMRWork42/.*
+-rw-r--r-- 1 HMRWork42 HMRWork42  108 Jul  8  2025 HMRWork42/.gitconfig
+drwx------ 5 HMRWork42 HMRWork42 4096 Jul  7  2025 HMRWork42/.gnupg
+drwx------ 2 HMRWork42 HMRWork42 4096 Jul  7  2025 HMRWork42/.ssh
