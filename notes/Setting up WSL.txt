@@ -1,0 +1,48 @@
+Setting up WSL:
+----
+Enable WSL in Windows 11
+1
+2
+3
+Enabling the Windows Subsystem for Linux (WSL) in Windows 11 allows you to run a Linux distribution alongside your Windows operating system. Follow these steps to get started:
+
+1. Open Windows Features
+
+Open the Start Menu and type "Windows Features" to find the "Turn Windows features on or off" option.
+
+2. Enable "Windows Subsystem for Linux"
+
+Scroll down the list and check the box next to "Windows Subsystem for Linux."
+
+This step will install the necessary components to support a Linux environment on your Windows machine. You might need to restart your computer after enabling this feature.
+
+3. Enable "Virtual Machine Platform"
+
+In the same list, find and check the box next to "Virtual Machine Platform."
+
+This feature is required for WSL 2, which offers better performance and compatibility than the original WSL.
+
+4. Open PowerShell as Administrator
+
+Press "Windows + X" and select "Windows Terminal (Admin)" or "Windows PowerShell (Admin)" from the menu.
+
+5. Install WSL
+
+Type the command wsl --install and press Enter.
+
+This command will download and install the latest version of WSL, including the default Linux distribution, which is usually Ubuntu.
+
+6. Set WSL 2 as Default
+
+To set WSL 2 as the default version, type the command wsl --set-default-version 2 and press Enter.
+
+This ensures that any future Linux distributions you install will use the WSL 2 architecture.
+
+7. Restart Your Computer
+
+Restart your computer to complete the installation process.
+----
+https://learn.microsoft.com/en-us/windows/wsl/install
+wsl --install
+wsl.exe --list --online
+wsl --install FedoraLinux-43
