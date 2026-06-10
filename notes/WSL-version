@@ -50,3 +50,24 @@ MSRDC version: 1.2.6676
 Direct3D version: 1.611.1-81528511
 DXCore version: 10.0.26100.1-240331-1435.ge-release
 Windows version: 10.0.26200.8457
+
+PS C:\WINDOWS\system32> wsl --version
+WSL version: 2.7.3.0
+Kernel version: 6.6.114.1-1
+WSLg version: 1.0.73
+MSRDC version: 1.2.6676
+Direct3D version: 1.611.1-81528511
+DXCore version: 10.0.26100.1-240331-1435.ge-release
+Windows version: 10.0.26200.8524
+PS C:\WINDOWS\system32> wsl --update
+Checking for updates.
+Updating Windows Subsystem for Linux to version: 2.7.8.
+PS C:\WINDOWS\system32> wsl --version
+WSL version: 2.7.8.0
+Kernel version: 6.18.33.1-1
+WSLg version: 1.0.73.2
+MSRDC version: 1.2.6676
+Direct3D version: 1.611.1-81528511
+DXCore version: 10.0.26100.1-240331-1435.ge-release
+Windows version: 10.0.26200.8524
+PS C:\Users\HinTa>
