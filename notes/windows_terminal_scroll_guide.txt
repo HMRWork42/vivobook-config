@@ -1,0 +1,73 @@
+User: how to scroll back screen on the windows console from the keyboard
+AI: You can scroll back the Windows console using the Page Up and Page Down keys after entering scroll mode.
+
+How to Scroll with the Keyboard
+1. Enter Scroll Mode:
+   - Press Ctrl + Shift + Up Arrow in modern Windows Terminal or PowerShell.
+   - Or press Alt + Spacebar, then select Edit and Scroll in older Command Prompt windows.
+2. Move Through Text:
+   - Press Page Up or Page Down to move up or down a full screen at a time.
+   - Press the Up Arrow or Down Arrow keys to move line by line.
+3. Exit Scroll Mode:
+   - Press Enter or Esc to return to the normal command line.
+
+If you're using a specific app like PowerShell, Command Prompt, or Windows Terminal, let me know so I can give you the exact shortcut for it.
+
+User: wsl2 shell on window 11
+AI: To scroll back your WSL2 shell inside Windows Terminal on Windows 11 using only your keyboard, use the built-in Terminal shortcuts:
+
+- Scroll up one full page: Press Ctrl + Shift + Page Up
+- Scroll down one full page: Press Ctrl + Shift + Page Down
+- Scroll up line-by-line: Press Ctrl + Shift + Up Arrow
+- Scroll down line-by-line: Press Ctrl + Shift + Down Arrow
+
+Alternative: Using tmux or screen
+If you are running your WSL2 shell inside a terminal multiplexer like tmux, the Windows Terminal shortcuts won't work inside that session. Instead, use the application's built-in scroll mode:
+1. Press Ctrl + B, then press [ to enter copy/scroll mode.
+2. Use your standard Page Up, Page Down, or Arrow keys to scroll.
+3. Press Q to exit scroll mode.
+
+Would you like to know how to customize these Windows Terminal shortcuts to different keys, or are you running into issues with a specific Linux text editor like Vim or Nano?
+
+User: what does page up key on it do?
+AI: When you are inside a WSL2 shell using Windows Terminal, pressing the standalone Page Up key does not scroll your terminal screen.
+
+Instead, it sends a Linux input code directly to the shell or the app you are running. Its exact behaviour depends on what you are currently doing:
+
+1. On the Empty Command Line (Bash/Zsh)
+If you have just been typing commands at a standard prompt:
+- In Bash: Pressing Page Up usually does nothing or outputs a generic ~ symbol.
+- In Zsh: It cycles backwards through your command history based on the first few letters you typed (acting like a smart history search).
+
+2. Inside Text Editors or Viewers (Vim, Nano, Less)
+When you are actively editing a file or reading a manual page (man), the terminal passes the key straight into the application.
+- It scrolls the text cursor up by one full screen within that specific file or document.
+
+How to make it actually scroll the terminal window
+If you want to use the Page Up key to look back at command outputs that have already scrolled off the screen, you must combine it with Ctrl + Shift:
+- Ctrl + Shift + Page Up — Scrolls the whole window up one full page.
+
+Would you like to know how to change your settings so that Shift + Page Up works instead (the traditional Linux terminal shortcut)?
+
+User: yes, please
+AI: To change your settings so that Shift + Page Up scrolls the window up, you need to edit the Windows Terminal settings file.
+
+How to Bind Shift + Page Up to Scroll
+1. Open Windows Terminal.
+2. Open the Settings file by pressing Ctrl + Shift + , (comma). This opens your settings.json file in your default text editor (like Notepad or VS Code).
+3. Scroll down to the "actions" or "keybindings" section.
+4. Paste the following two blocks of code into the actions list:
+{ "command": "scrollUpPage", "keys": "shift+pgup" },
+{ "command": "scrollDownPage", "keys": "shift+pgdn" }
+5. Save and close the file (Ctrl + S). The changes will apply instantly without needing to restart the terminal.
+
+Alternatively: Change it via the Graphical Settings Interface
+If you prefer not to edit the JSON file directly, you can do it using the settings menu:
+1. Open Windows Terminal and press Ctrl + , (comma) to open the standard Settings UI tab.
+2. In the left-hand sidebar, click on Actions.
+3. Scroll down until you find Scroll page up and click the edit pencil icon next to it.
+4. Press Shift + Page Up on your keyboard, then click the checkmark to accept.
+5. Do the same for Scroll page down using Shift + Page Down.
+6. Click Save in the bottom-right corner.
+
+Would you also like to know how to map shortcuts for scrolling line-by-line instead of a full page at a time, or are you all set?
